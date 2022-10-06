@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Button } from "react-daisyui";
 
 export default function PokemonCard({ pokemon }) {
   const [poke, setPoke] = useState(null);
@@ -10,7 +11,7 @@ export default function PokemonCard({ pokemon }) {
     fetch(pokemon.url)
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data);
+        console.log(data);
         setPoke(data);
       });
   }, [pokemon.url]);
@@ -24,24 +25,34 @@ export default function PokemonCard({ pokemon }) {
   };
 
   return (
-    <div className="card">
+    <div>
       {poke ? (
-        <>
-          <p>{capitalizeString(poke.name)}</p>
-          {toggleImage ? (
-            <img
-              src={poke.sprites.front_default}
-              alt={poke.name}
-              onClick={handleImageClick}
-            />
-          ) : (
-            <img
-              src={poke.sprites.back_default}
-              alt={poke.name}
-              onClick={handleImageClick}
-            />
-          )}
-        </>
+        <div className="card w-96 bg-base-100 shadow-xl">
+          <figure>
+            {toggleImage ? (
+              <img
+                src={poke.sprites.front_default}
+                alt={poke.name}
+                onMouseEnter={handleImageClick}
+              />
+            ) : (
+              <img
+                src={poke.sprites.back_default}
+                alt={poke.name}
+                onMouseLeave={handleImageClick}
+              />
+            )}
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">{capitalizeString(poke.name)}</h2>
+            <p>PokeID: {poke.id}</p>
+            <p>Base Experience: {poke.base_experience}</p>
+            <p>Base Weight: {poke.weight}</p>
+            <div className="card-actions justify-end">
+              <Button color="ghost">More Information</Button>
+            </div>
+          </div>
+        </div>
       ) : null}
     </div>
   );
