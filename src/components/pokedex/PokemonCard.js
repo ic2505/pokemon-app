@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { Button } from "react-daisyui";
+import { Button, Card } from "react-daisyui";
 
 export default function PokemonCard({ pokemon }) {
   const [poke, setPoke] = useState(null);
   const [toggleImage, setToggleImage] = useState(true);
 
-  console.log(pokemon);
+  // console.log(pokemon);
 
   useEffect(() => {
     fetch(pokemon.url)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setPoke(data);
       });
   }, [pokemon.url]);
@@ -27,6 +26,38 @@ export default function PokemonCard({ pokemon }) {
   return (
     <div>
       {poke ? (
+        <div>
+          <div className="mb-3"></div>
+          <Card className="card w-96 bg-base-100 shadow-xl" side="lg">
+            {toggleImage ? (
+              <Card.Image
+                className="pl-7"
+                src={poke.sprites.front_default}
+                alt={poke.name}
+                onMouseEnter={handleImageClick}
+              />
+            ) : (
+              <Card.Image
+                className="pl-7"
+                src={poke.sprites.back_default}
+                alt={poke.name}
+                onMouseLeave={handleImageClick}
+              />
+            )}
+            <Card.Body>
+              <Card.Title tag="h2">{capitalizeString(poke.name)}</Card.Title>
+              <p>PokeID: {poke.id}</p>
+              <p>Base Experience: {poke.base_experience}</p>
+              <p>Base Weight: {poke.weight}</p>
+              <Card.Actions className="justify-end">
+                <Button color="ghost">More Information</Button>
+              </Card.Actions>
+            </Card.Body>
+          </Card>
+        </div>
+      ) : null}
+
+      {/* {poke ? (
         <div className="card w-96 bg-base-100 shadow-xl">
           <figure>
             {toggleImage ? (
@@ -53,7 +84,7 @@ export default function PokemonCard({ pokemon }) {
             </div>
           </div>
         </div>
-      ) : null}
+      ) : null} */}
     </div>
   );
 }

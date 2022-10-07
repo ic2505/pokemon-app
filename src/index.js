@@ -5,7 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Landing from "./views/Landing";
 import About from "./views/About";
-import Pokemon from "./views/Pokemon";
+import Pokedex from "./views/Pokedex";
 import Error from "./views/Error";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -16,7 +16,7 @@ root.render(
         {/* Landing Pages */}
         <Route path="/" element={<Landing />} />
         <Route path="about" element={<About />} />
-        <Route path="pokemon" element={<Pokemon />} />
+        <Route path="pokedex" element={<Pokedex />} />
         <Route path="error" element={<Error />} />
       </Routes>
     </BrowserRouter>
