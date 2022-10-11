@@ -28,7 +28,15 @@ export default function PokemonCard({ pokemon }) {
       {poke ? (
         <div>
           <div className="mb-3"></div>
+
           <Card className="card w-96 bg-base-100 shadow-xl" side="lg">
+            {/* {!poke.sprites.back_default ? (
+              <Card.Image
+                className="pl-7"
+                src={poke.sprites.front_default}
+                alt={poke.name}
+              />
+            ) : null} */}
             {toggleImage ? (
               <Card.Image
                 className="pl-7"
@@ -44,6 +52,7 @@ export default function PokemonCard({ pokemon }) {
                 onMouseLeave={handleImageClick}
               />
             )}
+
             <Card.Body>
               <Card.Title tag="h2">{capitalizeString(poke.name)}</Card.Title>
               <p>PokeID: {poke.id}</p>

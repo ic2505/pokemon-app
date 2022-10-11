@@ -6,7 +6,7 @@ export default function PokemonContainer() {
   const [isFetching, setIsFetching] = useState(false);
   const [fetchCount, setFetchCount] = useState(1);
 
-  const POKE_NUM = 20;
+  const POKE_NUM = 50;
 
   useEffect(() => {
     fetch(`https://pokeapi.co/api/v2/pokemon/?limit=${POKE_NUM}`)
