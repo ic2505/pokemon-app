@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PokemonCard from "./PokemonCard";
 
-export default function PokemonContainer() {
+export default function PokemonContainer({ onModalClick }) {
   const [pokemons, setPokemons] = useState([]);
   const [isFetching, setIsFetching] = useState(false);
   const [fetchCount, setFetchCount] = useState(1);
@@ -58,9 +58,15 @@ export default function PokemonContainer() {
   }
 
   return (
-    <div className="grid grid-cols-3 gap-4 justify-items-center px-72 mt-6">
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 justify-items-center px-72 mt-1">
       {pokemons.map((pokemon, idx) => {
-        return <PokemonCard key={idx} pokemon={pokemon} />;
+        return (
+          <PokemonCard
+            key={idx}
+            pokemon={pokemon}
+            onModalClick={onModalClick}
+          />
+        );
       })}
     </div>
   );
