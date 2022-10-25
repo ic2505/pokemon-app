@@ -59,7 +59,7 @@ export default function PokemonCard({ pokemon, onModalClick }) {
                 <label
                   color="ghost"
                   htmlFor="my-modal-4"
-                  className="btn modal-button"
+                  className="btn modal-button btn-ghost"
                   onClick={handleClick}
                 >
                   More Information
