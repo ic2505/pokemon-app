@@ -1,0 +1,20 @@
+.start-gif {
+  background: url("../assets/poke.gif") no-repeat center center fixed;
+  background-size: cover;
+}
+.exit-gif {
+  background: url("../assets/poke2.gif") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.gif-container {
+  padding-top: 40vh;
+  height: 100vh;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 90%; */
+}
