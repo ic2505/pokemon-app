@@ -1,0 +1,39 @@
+{
+  "myPokemon": [
+    {
+      "name": "bulbasaur",
+      "url": "https://pokeapi.co/api/v2/pokemon/1/",
+      "id": 1
+    },
+    {
+      "name": "charizard",
+      "url": "https://pokeapi.co/api/v2/pokemon/6/",
+      "id": 2
+    },
+    {
+      "name": "blastoise",
+      "url": "https://pokeapi.co/api/v2/pokemon/9/",
+      "id": 3
+    },
+    {
+      "name": "wartortle",
+      "url": "https://pokeapi.co/api/v2/pokemon/8/",
+      "id": 4
+    },
+    {
+      "name": "arbok",
+      "url": "https://pokeapi.co/api/v2/pokemon/24/",
+      "id": 5
+    },
+    {
+      "name": "ponyta",
+      "url": "https://pokeapi.co/api/v2/pokemon/77/",
+      "id": 6
+    },
+    {
+      "name": "dragonite",
+      "url": "https://pokeapi.co/api/v2/pokemon/149/",
+      "id": 7
+    }
+  ]
+}

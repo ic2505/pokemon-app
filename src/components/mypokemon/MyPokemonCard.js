@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Button, Card } from "react-daisyui";
-// import { Card } from "semantic-ui-react";
+import { Card } from "react-daisyui";
 
-export default function PokemonCard({ pokemon, onModalClick }) {
+export default function MyPokemonCard({ pokemon, onModalClick }) {
   const [poke, setPoke] = useState(null);
   const [toggleImage, setToggleImage] = useState(true);
 
@@ -27,8 +26,11 @@ export default function PokemonCard({ pokemon, onModalClick }) {
     onModalClick(poke, pokemon);
   };
 
-  const navigateToPokemonPage = () => {
-    console.log("TODO navigateToPokemonPage", poke.id);
+  const handleRemove = () => {
+    console.log(
+      poke.name,
+      " - remove from DB, rerender in MyPokemonContainer using filter"
+    );
   };
 
   return (
@@ -62,9 +64,13 @@ export default function PokemonCard({ pokemon, onModalClick }) {
                 <Card.Actions className="justify-end">
                   <label
                     color="ghost"
+                    // htmlFor="my-modal-4"
                     className="btn modal-button btn-ghost"
-                    onClick={navigateToPokemonPage}
+                    onClick={handleRemove}
                   >
+                    Remove
+                  </label>
+                  <label color="ghost" className="btn modal-button btn-ghost">
                     More Information
                   </label>
                 </Card.Actions>
