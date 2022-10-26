@@ -32,15 +32,15 @@ export default function MyPokeModal({ modalState, selectedPokemon }) {
   // console.log(capitalizeString(pokemonName));
 
   // ! ADD POKEMON TO DATABASE
-  const handleFavorite = () => {
-    console.log("favoriting", selectedPokemon);
-    fetch("http://localhost:6001/myPokemon", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(selectedPokemon),
-    });
+  const handleRemove = () => {
+    console.log("TODO remove", selectedPokemon);
+    // fetch("http://localhost:6001/myPokemon", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(selectedPokemon),
+    // });
   };
 
   return (
@@ -69,7 +69,7 @@ export default function MyPokeModal({ modalState, selectedPokemon }) {
               </p>
             );
           })}
-          <div className="modal-action " onClick={handleFavorite}>
+          <div className="modal-action " onClick={handleRemove}>
             <a href="#" className="btn btn-ghost">
               {"Remove from favorites"}
             </a>

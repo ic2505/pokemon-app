@@ -11,7 +11,7 @@ export default function Example() {
             <a href="/">
               <span className="sr-only">Pokemon Company</span>
               <img
-                className="h-8 w-auto sm:h-10"
+                className="h-8 w-auto sm:h-14"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png"
                 alt=""
               />
@@ -25,19 +25,19 @@ export default function Example() {
           </div>
           <Popover.Group as="nav" className="hidden space-x-10 md:flex">
             <a
-              href="pokedex"
+              href="/pokedex"
               className="text-base font-medium text-gray-500 hover:text-gray-900"
             >
               Pokedex
             </a>
             <a
-              href="myPokemon"
+              href="/my_pokemon"
               className="text-base font-medium text-gray-500 hover:text-gray-900"
             >
               My Pokemon
             </a>
             <a
-              href="about"
+              href="/about"
               className="text-base font-medium text-gray-500 hover:text-gray-900"
             >
               About Us
@@ -45,7 +45,7 @@ export default function Example() {
           </Popover.Group>
           <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
             <a
-              href="error"
+              href="/error"
               className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
             >
               Sign in

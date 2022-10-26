@@ -10,7 +10,7 @@ export default function Pokemon() {
   const [selectedPokemon, setSelectedPokemon] = useState({});
 
   const handleModalClick = (poke, pokemon) => {
-    console.log("click", poke.id, poke.name);
+    // console.log("click", poke.id, poke.name);
     setModalState(poke);
     setSelectedPokemon(pokemon);
   };

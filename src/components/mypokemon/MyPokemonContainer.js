@@ -10,7 +10,7 @@ export default function MyPokemonContainer({ onModalClick }) {
       .then(setMyPokemons);
   }, []);
 
-  console.log(myPokemons);
+  // console.log(myPokemons);
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 2xl:grid-cols-4 gap-4 justify-items-center px-32 mt-1">

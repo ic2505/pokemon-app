@@ -28,6 +28,7 @@ export default function MyPokemonCard({ pokemon, onModalClick }) {
 
   const handleRemove = () => {
     console.log(
+      "TODO ",
       poke.name,
       " - remove from DB, rerender in MyPokemonContainer using filter"
     );

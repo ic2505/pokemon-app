@@ -60,13 +60,14 @@ export default function PokemonCard({ pokemon, onModalClick }) {
                 <p>Base Experience: {poke.base_experience}</p>
                 <p>Base Weight: {poke.weight}</p>
                 <Card.Actions className="justify-end">
-                  <label
+                  <a
                     color="ghost"
                     className="btn modal-button btn-ghost"
-                    onClick={navigateToPokemonPage}
+                    // onClick={navigateToPokemonPage}
+                    href={`pokedex/${poke.id}`}
                   >
                     More Information
-                  </label>
+                  </a>
                 </Card.Actions>
               </Card.Body>
             </Card>
