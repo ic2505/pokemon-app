@@ -16,7 +16,7 @@ export default function PokemonDetail() {
 
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <DetailPage pokemon={pokemon} />
     </div>
   );

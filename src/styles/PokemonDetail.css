@@ -1,11 +1,17 @@
 .default-background {
   background: url("https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77700876498.jpg")
     no-repeat center center fixed;
+
+  background-size: cover;
+}
+
+.water-background {
+  background: url("https://lillyan.net/?door.head.162648217138");
   background-size: cover;
 }
 
 .bg-strech {
-  height: 31vh;
+  height: 30vh;
 }
 
 .type-icons {
