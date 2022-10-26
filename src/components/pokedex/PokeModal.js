@@ -8,6 +8,8 @@ export default function PokeModal({ modalState, selectedPokemon }) {
   const [pokemonImage, setPokemonImage] = useState("");
   const [pokemonAbilities, setPokemonAbilities] = useState([]);
   const [pokemonStats, setPokemonStats] = useState([]);
+  const [pokemonBaseXp, setPokemonBaseXp] = useState(null);
+  const [pokemonWeight, setPokemonWeight] = useState([]);
 
   useEffect(() => {
     if (!isEmpty(modalState)) {
@@ -15,6 +17,8 @@ export default function PokeModal({ modalState, selectedPokemon }) {
       setPokemonImage(modalState.sprites.front_default);
       setPokemonAbilities(modalState.abilities);
       setPokemonStats(modalState.stats);
+      setPokemonBaseXp(modalState.base_experience);
+      setPokemonWeight(modalState.weight);
     } else {
       console.log("Object is Empty");
     }
@@ -51,6 +55,12 @@ export default function PokeModal({ modalState, selectedPokemon }) {
           {/* MODAL INFORMATION */}
           <h3 className="text-lg font-bold">{capitalizeString(pokemonName)}</h3>
           <img src={pokemonImage} alt={pokemonName} />
+          <p>
+            <b>{"Base Experience:"}</b> {pokemonBaseXp}
+          </p>
+          <p>
+            <b>{"Base Weight:"}</b> {pokemonWeight}
+          </p>
           <p className="py-4">
             <b>{"Pokemon Abilities:"}</b>
           </p>
@@ -65,7 +75,7 @@ export default function PokeModal({ modalState, selectedPokemon }) {
           {pokemonStats.map((stat, idx) => {
             return (
               <p key={idx}>
-                <b>{capitalizeString(stat.stat.name)}</b> : {stat.base_stat}
+                <b>{capitalizeString(stat.stat.name)}</b>: {stat.base_stat}
               </p>
             );
           })}

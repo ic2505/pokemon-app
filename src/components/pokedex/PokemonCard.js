@@ -56,9 +56,10 @@ export default function PokemonCard({ pokemon, onModalClick }) {
 
               <Card.Body>
                 <Card.Title tag="h2">{capitalizeString(poke.name)}</Card.Title>
-                <p>PokeID: {poke.id}</p>
-                <p>Base Experience: {poke.base_experience}</p>
-                <p>Base Weight: {poke.weight}</p>
+                <p>
+                  <b>PokéID: </b>
+                  {poke.id}
+                </p>
                 <Card.Actions className="justify-end">
                   <a
                     color="ghost"

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Header from "../components/Header";
+import "../styles/PokemonDetail.css";
 
 export default function PokemonDetail() {
   const [pokemon, setPokemon] = useState(null);
@@ -15,7 +16,7 @@ export default function PokemonDetail() {
   if (!pokemon)
     return (
       <div>
-        <Header />
+        {/* <Header /> */}
         <h2>{"Loading..."}</h2>
       </div>
     );
@@ -24,29 +25,30 @@ export default function PokemonDetail() {
     return str.charAt(0).toUpperCase() + str.slice(1);
   };
 
-  console.log(pokemon);
+  let typeArr = [];
+  pokemon.types.map((type) => {
+    typeArr.push(type.type.name);
+  });
 
-  console.log(pokemon.sprites.other.home);
-
-  // let spriteArray = [];
-  // for (const key in pokemon.sprites) {
-  //   if (pokemon.sprites[key]) {
-  //     console.log(`${key}: ${pokemon.sprites[key]}`);
-  //     spriteArray.push(pokemon.sprites[key]);
-  //   }
-  // }
-  // console.log(spriteArray);
+  console.log(typeArr);
 
   return (
     <div>
-      <Header />
-      <Link to={`/pokedex`} className="btn btn-ghost">
-        {"<- Back"}
-      </Link>
-      <h1>
-        <b>{capitalizeString(pokemon.name)}</b>
-      </h1>
-      <img src={pokemon.sprites.other.home.front_default} alt={pokemon.name} />
+      {/* <Header /> */}
+      <div className="default-background">
+        <Link to={`/pokedex`} className="btn btn-ghost">
+          {"<- Back"}
+        </Link>
+        <div className="bg-strech">
+          <h1>
+            <b>{capitalizeString(pokemon.name)}</b>
+          </h1>
+          <img
+            src={pokemon.sprites.other.home.front_default}
+            alt={pokemon.name}
+          />
+        </div>
+      </div>
     </div>
   );
 }

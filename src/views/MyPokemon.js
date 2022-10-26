@@ -17,9 +17,11 @@ export default function MyPokemon() {
 
   return (
     <div>
-      <Header />
+      {/* <Header />
       <MyPokeModal modalState={modalState} selectedPokemon={selectedPokemon} />
-      <MyPokemonContainer onModalClick={handleModalClick} />
+      <MyPokemonContainer onModalClick={handleModalClick} /> */}
+      <Header />
+      {"My Pokemon"}
     </div>
   );
 }
