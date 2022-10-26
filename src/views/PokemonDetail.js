@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Header from "../components/Header";
+import DetailPage from "../components/pokemondetail/DetailPage";
 import "../styles/PokemonDetail.css";
 
 export default function PokemonDetail() {
@@ -13,42 +14,10 @@ export default function PokemonDetail() {
       .then((data) => setPokemon(data));
   }, [id]);
 
-  if (!pokemon)
-    return (
-      <div>
-        {/* <Header /> */}
-        <h2>{"Loading..."}</h2>
-      </div>
-    );
-
-  const capitalizeString = (str) => {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  };
-
-  let typeArr = [];
-  pokemon.types.map((type) => {
-    typeArr.push(type.type.name);
-  });
-
-  console.log(typeArr);
-
   return (
     <div>
       <Header />
-      <div className="default-background">
-        <Link to={`/pokedex`} className="btn btn-ghost">
-          {"<- Back"}
-        </Link>
-        <div className="bg-strech">
-          <h1>
-            <b>{capitalizeString(pokemon.name)}</b>
-          </h1>
-          <img
-            src={pokemon.sprites.other.home.front_default}
-            alt={pokemon.name}
-          />
-        </div>
-      </div>
+      <DetailPage pokemon={pokemon} />
     </div>
   );
 }

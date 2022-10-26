@@ -54,6 +54,61 @@
       "name": "growlithe",
       "url": "https://pokeapi.co/api/v2/pokemon/58/",
       "id": 11
+    },
+    {
+      "name": "kabutops",
+      "url": "https://pokeapi.co/api/v2/pokemon/141/",
+      "id": 12
+    },
+    {
+      "name": "venusaur",
+      "url": "https://pokeapi.co/api/v2/pokemon/3/",
+      "id": 13
+    },
+    {
+      "name": "lickitung",
+      "url": "https://pokeapi.co/api/v2/pokemon/108/",
+      "id": 14
+    },
+    {
+      "name": "reuniclus",
+      "url": "https://pokeapi.co/api/v2/pokemon/579/",
+      "id": 15
+    },
+    {
+      "name": "ampharos-mega",
+      "url": "https://pokeapi.co/api/v2/pokemon/10045/",
+      "id": 16
+    },
+    {
+      "name": "pinsir-mega",
+      "url": "https://pokeapi.co/api/v2/pokemon/10040/",
+      "id": 17
+    },
+    {
+      "name": "toxtricity-low-key-gmax",
+      "url": "https://pokeapi.co/api/v2/pokemon/10228/",
+      "id": 18
+    },
+    {
+      "name": "duraludon-gmax",
+      "url": "https://pokeapi.co/api/v2/pokemon/10225/",
+      "id": 19
+    },
+    {
+      "name": "copperajah-gmax",
+      "url": "https://pokeapi.co/api/v2/pokemon/10224/",
+      "id": 20
+    },
+    {
+      "name": "urshifu-single-strike-gmax",
+      "url": "https://pokeapi.co/api/v2/pokemon/10226/",
+      "id": 21
+    },
+    {
+      "name": "centiskorch-gmax",
+      "url": "https://pokeapi.co/api/v2/pokemon/10220/",
+      "id": 22
     }
   ]
 }

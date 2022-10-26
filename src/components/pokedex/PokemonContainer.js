@@ -53,7 +53,7 @@ export default function PokemonContainer({ onModalClick }) {
       return;
     }
 
-    console.log("fetch more");
+    // console.log("fetch more");
     setIsFetching(true);
   }
 

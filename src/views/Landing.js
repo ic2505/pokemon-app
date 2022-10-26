@@ -15,12 +15,10 @@ export default function Landing() {
   }, []);
 
   const handleClick = () => {
-    console.log("click");
     setIsEnter(false);
     setDisplayButton(false);
 
     setTimeout(() => {
-      console.log("reroute");
       navigate("/pokedex");
     }, 1400);
   };

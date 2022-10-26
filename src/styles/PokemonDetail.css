@@ -5,5 +5,10 @@
 }
 
 .bg-strech {
-  height: 100vh;
+  height: 31vh;
+}
+
+.type-icons {
+  display: flex;
+  justify-content: flex-start;
 }

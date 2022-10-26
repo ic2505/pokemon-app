@@ -25,9 +25,10 @@ export default function PokeModal({ modalState, selectedPokemon }) {
       setPokemonWeight(modalState.weight);
       let typeArr = [];
       modalState.types.map((type) => {
-        typeArr.push(type.type.name);
+        typeArr.push(capitalizeString(type.type.name));
       });
       setPokemonType(typeArr);
+      console.log(modalState);
     } else {
       console.log("Object is Empty");
     }
@@ -85,9 +86,7 @@ export default function PokeModal({ modalState, selectedPokemon }) {
                 <p className="py-4">
                   <b>{"Pokemon Type:"}</b>
                 </p>
-                {pokemonType.map((type, idx) => {
-                  return <p key={idx}>{capitalizeString(type)}</p>;
-                })}
+                <p>{pokemonType.join(", ")}</p>
               </div>
 
               {/* ABILITIES */}
