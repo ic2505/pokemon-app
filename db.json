@@ -34,6 +34,26 @@
       "name": "dragonite",
       "url": "https://pokeapi.co/api/v2/pokemon/149/",
       "id": 7
+    },
+    {
+      "name": "blastoise",
+      "url": "https://pokeapi.co/api/v2/pokemon/9/",
+      "id": 8
+    },
+    {
+      "name": "ivysaur",
+      "url": "https://pokeapi.co/api/v2/pokemon/2/",
+      "id": 9
+    },
+    {
+      "name": "persian",
+      "url": "https://pokeapi.co/api/v2/pokemon/53/",
+      "id": 10
+    },
+    {
+      "name": "growlithe",
+      "url": "https://pokeapi.co/api/v2/pokemon/58/",
+      "id": 11
     }
   ]
 }

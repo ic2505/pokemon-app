@@ -1,0 +1,28 @@
+.row {
+  display: flex;
+}
+
+.modal-information {
+  flex: 55%;
+  margin-top: 30px;
+}
+
+.modal-image {
+  display: flex;
+  flex: 45%;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.modal-image img {
+  width: 150px;
+}
+
+h3 {
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.pokemon-type {
+  /* display: flex; */
+}

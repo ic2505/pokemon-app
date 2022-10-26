@@ -34,7 +34,7 @@ export default function PokemonDetail() {
 
   return (
     <div>
-      {/* <Header /> */}
+      <Header />
       <div className="default-background">
         <Link to={`/pokedex`} className="btn btn-ghost">
           {"<- Back"}
