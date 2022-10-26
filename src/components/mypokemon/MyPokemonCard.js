@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Button, Card } from "react-daisyui";
+import { Card } from "react-daisyui";
 
-export default function PokemonCard({ pokemon, onModalClick }) {
+export default function MyPokemonCard({ pokemon, onModalClick }) {
   const [poke, setPoke] = useState(null);
   const [toggleImage, setToggleImage] = useState(true);
 
@@ -26,6 +26,14 @@ export default function PokemonCard({ pokemon, onModalClick }) {
     onModalClick(poke, pokemon);
   };
 
+  const handleRemove = () => {
+    console.log(
+      "TODO ",
+      poke.name,
+      " - remove from DB, rerender in MyPokemonContainer using filter"
+    );
+  };
+
   return (
     <div>
       {poke ? (
@@ -33,14 +41,7 @@ export default function PokemonCard({ pokemon, onModalClick }) {
           <div className="mb-3"></div>
           <label htmlFor="my-modal-4" onClick={handleClick}>
             <Card className="card w-96 bg-base-100 shadow-xl" side="lg">
-              {!poke.sprites.back_default ? (
-                <Card.Image
-                  className="pl-7"
-                  src={poke.sprites.front_default}
-                  alt={poke.name}
-                  onMouseEnter={handleImageClick}
-                />
-              ) : toggleImage ? (
+              {toggleImage ? (
                 <Card.Image
                   className="pl-7"
                   src={poke.sprites.front_default}
@@ -58,18 +59,21 @@ export default function PokemonCard({ pokemon, onModalClick }) {
 
               <Card.Body>
                 <Card.Title tag="h2">{capitalizeString(poke.name)}</Card.Title>
-                <p>
-                  <b>PokéID: </b>
-                  {poke.id}
-                </p>
+                <p>PokeID: {poke.id}</p>
+                <p>Base Experience: {poke.base_experience}</p>
+                <p>Base Weight: {poke.weight}</p>
                 <Card.Actions className="justify-end">
-                  <a
+                  <label
                     color="ghost"
+                    // htmlFor="my-modal-4"
                     className="btn modal-button btn-ghost"
-                    href={`pokedex/${poke.id}`}
+                    onClick={handleRemove}
                   >
+                    Remove
+                  </label>
+                  <label color="ghost" className="btn modal-button btn-ghost">
                     More Information
-                  </a>
+                  </label>
                 </Card.Actions>
               </Card.Body>
             </Card>

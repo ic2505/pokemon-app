@@ -11,7 +11,7 @@ export default function Example() {
             <a href="/">
               <span className="sr-only">Pokemon Company</span>
               <img
-                className="h-8 w-auto sm:h-10"
+                className="h-8 w-auto sm:h-14"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png"
                 alt=""
               />
@@ -25,34 +25,34 @@ export default function Example() {
           </div>
           <Popover.Group as="nav" className="hidden space-x-10 md:flex">
             <a
-              href="pokedex"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
+              href="/pokedex"
+              className="text-base font-extrabold text-sky-700 hover:text-sky-900"
             >
-              Pokedex
+              POKÉDEX
             </a>
             <a
-              href="myPokemon"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
+              href="/my_pokemon"
+              className="text-base font-extrabold text-sky-700 hover:text-sky-900"
             >
-              My Pokemon
+              MY POKÉMON
             </a>
             <a
-              href="about"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
+              href="/about"
+              className="text-base font-extrabold text-sky-700 hover:text-sky-900"
             >
-              About Us
+              ABOUT US
             </a>
           </Popover.Group>
           <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
             <a
-              href="error"
-              className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+              href="/error"
+              className="whitespace-nowrap text-base font-medium text-sky-700 hover:text-sky-900"
             >
               Sign in
             </a>
             <a
               href="error"
-              className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-blue-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-blue-700"
+              className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-sky-700 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-sky-800"
             >
               Sign up
             </a>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import PokemonCard from "./PokemonCard";
 
 export default function PokemonContainer({ onModalClick }) {
@@ -34,7 +34,7 @@ export default function PokemonContainer({ onModalClick }) {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log([...pokemons, ...data.results]);
+        // console.log([...pokemons, ...data.results]);
         setPokemons([...pokemons, ...data.results]);
       });
     setIsFetching(false);
@@ -53,7 +53,7 @@ export default function PokemonContainer({ onModalClick }) {
       return;
     }
 
-    console.log("fetch more");
+    // console.log("fetch more");
     setIsFetching(true);
   }
 

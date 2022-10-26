@@ -3,23 +3,22 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Landing from "./views/Landing";
 import About from "./views/About";
 import Pokedex from "./views/Pokedex";
-import MyPokemon from "./views/MyPokemon.js";
+import MyPokemon from "./views/MyPokemon";
+import PokemonDetail from "./views/PokemonDetail";
 import Error from "./views/Error";
 import "./App.css";
 
-function App() {
+export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Landing Pages */}
         <Route path="/" element={<Landing />} />
-        <Route path="about" element={<About />} />
-        <Route path="pokedex" element={<Pokedex />} />
-        <Route path="myPokemon" element={<MyPokemon />} />
-        <Route path="error" element={<Error />} />
+        <Route path="/about" element={<About />} />
+        <Route exact path="/pokedex" element={<Pokedex />} />
+        <Route path="/pokedex/:id" element={<PokemonDetail />} />
+        <Route path="/my_pokemon" element={<MyPokemon />} />
+        <Route path="/error" element={<Error />} />
       </Routes>
     </BrowserRouter>
   );
 }
-
-export default App;
