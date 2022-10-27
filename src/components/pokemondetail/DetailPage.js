@@ -44,7 +44,7 @@ export default function DetailPage({ pokemon }) {
     textColor = "text-slate-100";
   } else if (typeArr.includes("Flying")) {
     bgClass = "flying-background";
-    textColor = "text-slate-100";
+    textColor = "text-gray-800";
   } else if (typeArr.includes("Grass")) {
     bgClass = "grass-background";
     textColor = "text-gray-800";
@@ -56,43 +56,52 @@ export default function DetailPage({ pokemon }) {
     textColor = "text-gray-800";
   }
 
+  console.log(pokemon);
+
   return (
-    <div className={bgClass}>
+    <div className={`${bgClass} `}>
       <Link to={`/pokedex`} className="btn m-10">
         {"<- Back"}
       </Link>
-      <div className={`hero ${textColor}`}>
-        <div className="hero-content flex-col lg:flex-row-reverse">
-          <img
-            src={pokemon.sprites.other.home.front_default}
-            className=" max-w-sm md:max-w-md lg:max-w-lg rounded-lg backdrop-blur-md shadow-2xl p-6 lg:p-8"
-            alt={pokemon.name}
-          />
-          <div>
-            <div className="type-icons">
-              <h1 className="text-6xl font-bold mr-6 mt-2 ">
-                {capitalizeString(pokemon.name)}
-              </h1>
-              <div className="flex">
-                {typeArr.map((type) => {
-                  return (
-                    <img
-                      key={type}
-                      src={require(`../../assets/PokeTypes/${type}.png`)}
-                      alt={"bug"}
-                      className="h-24"
-                    />
-                  );
-                })}
+
+      <div className="flex justify-center">
+        <div
+          className={`card ${textColor} lg:card-side shadow-xl w-11/12 backdrop-blur-md lg:flex-row-reverse `}
+        >
+          <figure>
+            <img
+              src={pokemon.sprites.other.home.front_default}
+              className=" max-w-sm md:max-w-md lg:max-w-lg rounded-lg  p-6 lg:p-8"
+              alt={pokemon.name}
+            />
+          </figure>
+          <div className="card-body">
+            <div>
+              <div className="type-icons">
+                <h1 className="text-6xl font-bold mr-6 mt-2 ">
+                  {capitalizeString(pokemon.name)}
+                </h1>
+                <div className="flex">
+                  {typeArr.map((type) => {
+                    return (
+                      <img
+                        key={type}
+                        src={require(`../../assets/PokeTypes/${type}.png`)}
+                        alt={"bug"}
+                        className="h-24"
+                      />
+                    );
+                  })}
+                </div>
               </div>
+              <Abilities abilities={pokemon.abilities} />
+              <p className="py-6">
+                Provident cupiditate voluptatem et in. Quaerat fugiat ut
+                assumenda excepturi exercitationem quasi. In deleniti eaque aut
+                repudiandae et a id nisi.
+              </p>
+              <button className="btn btn-primary">Add to Favorites</button>
             </div>
-            <Abilities abilities={pokemon.abilities} />
-            <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
-            <button className="btn btn-primary">Add to Favorites</button>
           </div>
         </div>
       </div>
