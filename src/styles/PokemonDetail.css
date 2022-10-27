@@ -1,13 +1,67 @@
 .default-background {
   background: url("https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77700876498.jpg")
     no-repeat center center fixed;
-
   background-size: cover;
+  width: 100vw;
+  height: 100vh;
 }
 
 .water-background {
-  background: url("https://lillyan.net/?door.head.162648217138");
+  background: url("../assets/backgrounds/Water.gif") no-repeat center center
+    fixed;
   background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.fire-background {
+  background: url("../assets/backgrounds/Fire.gif") no-repeat center center
+    fixed;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.flying-background {
+  background: url("../assets/backgrounds/Flying.gif") no-repeat center center
+    fixed;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+.poison-background {
+  background: url("../assets/backgrounds/Poison.gif") no-repeat center center
+    fixed;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+.electric-background {
+  background: url("../assets/backgrounds/Electric.gif") no-repeat center center
+    fixed;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+.cosmic-background {
+  background: url("../assets/backgrounds/Cosmic.gif") no-repeat center center
+    fixed;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+.grass-background {
+  background: url("../assets/backgrounds/Grass.gif") no-repeat center center
+    fixed;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+.ice-background {
+  background: url("../assets/backgrounds/Ice.gif") no-repeat center center fixed;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
 }
 
 .bg-strech {

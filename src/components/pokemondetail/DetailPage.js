@@ -22,8 +22,27 @@ export default function DetailPage({ pokemon }) {
   console.log(typeArr.includes("Water"));
 
   let bgClass = "";
-  if (typeArr.includes("Water")) {
+  if (
+    typeArr.includes("Fairy") ||
+    typeArr.includes("Psychic") ||
+    typeArr.includes("Ghost") ||
+    typeArr.includes("Dragon")
+  ) {
+    bgClass = "cosmic-background";
+  } else if (typeArr.includes("Ice")) {
+    bgClass = "ice-background";
+  } else if (typeArr.includes("Water")) {
     bgClass = "water-background";
+  } else if (typeArr.includes("Electric")) {
+    bgClass = "electric-background";
+  } else if (typeArr.includes("Fire")) {
+    bgClass = "fire-background";
+  } else if (typeArr.includes("Flying")) {
+    bgClass = "flying-background";
+  } else if (typeArr.includes("Grass")) {
+    bgClass = "grass-background";
+  } else if (typeArr.includes("Poison")) {
+    bgClass = "poison-background";
   } else {
     bgClass = "default-background";
   }
