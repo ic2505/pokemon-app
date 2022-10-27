@@ -66,7 +66,7 @@ export default function DetailPage({ pokemon }) {
 
       <div className="flex justify-center">
         <div
-          className={`card ${textColor} lg:card-side shadow-xl w-11/12 backdrop-blur-md lg:flex-row-reverse `}
+          className={`card ${textColor} lg:card-side shadow-xl w-11/12 backdrop-blur-md lg:flex-row-reverse p-4 pb-20`}
         >
           <figure>
             <img
