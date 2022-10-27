@@ -109,6 +109,26 @@
       "name": "centiskorch-gmax",
       "url": "https://pokeapi.co/api/v2/pokemon/10220/",
       "id": 22
+    },
+    {
+      "name": "blastoise",
+      "url": "https://pokeapi.co/api/v2/pokemon/9/",
+      "id": 23
+    },
+    {
+      "name": "dewgong",
+      "url": "https://pokeapi.co/api/v2/pokemon/87/",
+      "id": 24
+    },
+    {
+      "name": "ninetales",
+      "url": "https://pokeapi.co/api/v2/pokemon/38/",
+      "id": 25
+    },
+    {
+      "name": "vileplume",
+      "url": "https://pokeapi.co/api/v2/pokemon/45/",
+      "id": 26
     }
   ]
 }

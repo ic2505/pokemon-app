@@ -19,23 +19,49 @@ export default function DetailPage({ pokemon }) {
     typeArr.push(capitalizeString(type.type.name));
   });
 
-  console.log(typeArr);
+  console.log(typeArr.includes("Water"));
+
+  let bgClass = "";
+  if (
+    typeArr.includes("Fairy") ||
+    typeArr.includes("Psychic") ||
+    typeArr.includes("Ghost") ||
+    typeArr.includes("Dragon")
+  ) {
+    bgClass = "cosmic-background";
+  } else if (typeArr.includes("Ice")) {
+    bgClass = "ice-background";
+  } else if (typeArr.includes("Water")) {
+    bgClass = "water-background";
+  } else if (typeArr.includes("Electric")) {
+    bgClass = "electric-background";
+  } else if (typeArr.includes("Fire")) {
+    bgClass = "fire-background";
+  } else if (typeArr.includes("Flying")) {
+    bgClass = "flying-background";
+  } else if (typeArr.includes("Grass")) {
+    bgClass = "grass-background";
+  } else if (typeArr.includes("Poison")) {
+    bgClass = "poison-background";
+  } else {
+    bgClass = "default-background";
+  }
 
   return (
-    <div className="default-background">
-      <Link to={`/pokedex`} className="btn m-6">
+    <div className={bgClass}>
+      <Link to={`/pokedex`} className="btn m-10">
         {"<- Back"}
       </Link>
       <div className="hero">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img
             src={pokemon.sprites.other.home.front_default}
-            className="max-w-sm rounded-lg backdrop-blur-md shadow-2xl"
+            className=" max-w-sm md:max-w-md lg:max-w-lg rounded-lg backdrop-blur-md shadow-2xl p-6 lg:p-8"
             alt={pokemon.name}
           />
           <div>
             <div className="type-icons">
-              <h1 className="text-6xl font-bold mr-6">
+              <h1 className="text-6xl font-bold mr-6 mt-2 text-white">
                 {capitalizeString(pokemon.name)}
               </h1>
               <div className="flex">
@@ -50,12 +76,12 @@ export default function DetailPage({ pokemon }) {
                 })}
               </div>
             </div>
-            <p className="py-6">
+            <p className="py-6 text-white">
               Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.
             </p>
-            <button className="btn btn-primary">Get Started</button>
+            <button className="btn btn-primary">Add to Favorites</button>
           </div>
         </div>
       </div>

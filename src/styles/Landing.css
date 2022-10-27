@@ -1,10 +1,16 @@
 .start-gif {
-  background: url("../assets/poke.gif") no-repeat center center fixed;
+  background: url("../assets/poke.gif");
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
 }
 .exit-gif {
-  background: url("../assets/poke2.gif") no-repeat center center fixed;
+  background: url("../assets/poke2.gif");
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
 .gif-container {
@@ -12,9 +18,6 @@
   height: 100vh;
 }
 
-.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* height: 90%; */
+button {
+  position: fixed;
 }
