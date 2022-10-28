@@ -4,7 +4,6 @@ export default function Stat({ stat, progressColor }) {
   if (!stat)
     return (
       <div>
-        {/* <Header /> */}
         <p>{"Loading..."}</p>
       </div>
     );

@@ -12,7 +12,6 @@ export default function Ability({ url }) {
   if (!ability)
     return (
       <div>
-        {/* <Header /> */}
         <p>{"Loading..."}</p>
       </div>
     );
