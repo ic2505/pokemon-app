@@ -16,6 +16,19 @@ export default function DetailPage({ pokemon }) {
     return str.charAt(0).toUpperCase() + str.slice(1);
   };
 
+  const handleFavorite = () => {
+    console.log(`https://pokeapi.co/api/v2/pokemon/${pokemon.id}/`);
+    fetch("http://localhost:6001/myPokemon", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        url: `https://pokeapi.co/api/v2/pokemon/${pokemon.id}/`,
+      }),
+    });
+  };
+
   let typeArr = [];
   pokemon.types.map((type) => {
     typeArr.push(capitalizeString(type.type.name));
@@ -124,7 +137,9 @@ export default function DetailPage({ pokemon }) {
           <div className="px-12 pb-12 pt-2">
             <Moves moves={pokemon.moves} />
             <div className="flex justify-start pt-8">
-              <button className="btn btn-primary ">Add to Favorites</button>
+              <button className="btn btn-primary " onClick={handleFavorite}>
+                Add to Favorites
+              </button>
             </div>
           </div>
         </div>

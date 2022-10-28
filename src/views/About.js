@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
+import AboutBody from "../components/about/AboutBody";
 
 export default function About() {
   var img = new Image();
@@ -17,7 +18,7 @@ export default function About() {
   return (
     <div>
       <Header />
-      <h1>About</h1>
+      <AboutBody />
     </div>
   );
 }

@@ -8,6 +8,15 @@ export default function Stat({ stat, progressColor }) {
       </div>
     );
 
+  let statName = stat.stat.name;
+  if (stat.stat.name === "special-attack") {
+    statName = "Sp.Attack";
+  } else if (stat.stat.name === "special-defense") {
+    statName = "Sp.Defense";
+  } else {
+    statName = stat.stat.name;
+  }
+
   const capitalizeString = (str) => {
     return str.charAt(0).toUpperCase() + str.slice(1);
   };
@@ -15,7 +24,7 @@ export default function Stat({ stat, progressColor }) {
   return (
     <div className="grid grid-cols-4 gap-3">
       <div>
-        <b>{capitalizeString(stat.stat.name)}: </b>
+        <b>{capitalizeString(statName)}: </b>
       </div>
       <div className="flex col-span-3">
         <progress
