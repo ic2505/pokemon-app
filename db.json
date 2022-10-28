@@ -7,6 +7,14 @@
     {
       "url": "https://pokeapi.co/api/v2/pokemon/2/",
       "id": 2
+    },
+    {
+      "url": "https://pokeapi.co/api/v2/pokemon/151/",
+      "id": 3
+    },
+    {
+      "url": "https://pokeapi.co/api/v2/pokemon/8/",
+      "id": 4
     }
   ]
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
+import PokemonContainer from "../components/pokedex/PokemonContainer";
 
 export default function MyPokemon() {
   const [myPokemons, setMyPokemons] = useState(null);
@@ -22,9 +23,7 @@ export default function MyPokemon() {
   return (
     <div>
       <Header />
-      {myPokemons.map((pokemon, idx) => {
-        return <h1 key={idx}>{pokemon.url}</h1>;
-      })}
+      <PokemonContainer pokemons={myPokemons} />
     </div>
   );
 }
