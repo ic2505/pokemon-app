@@ -31,7 +31,7 @@ export default function Ability({ url }) {
   };
 
   return (
-    <div>
+    <div className="pb-1">
       <p>
         <b> {capitalizeString(ability.name)}:</b> {entry}
       </p>

@@ -1,9 +1,10 @@
 .default-background {
-  background: url("https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77700876498.jpg")
-    no-repeat center center fixed;
+  background: url("../assets/backgrounds/default-bg.jpg") no-repeat center
+    center scroll;
   background-size: cover;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
 .water-background {
