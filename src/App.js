@@ -6,7 +6,6 @@ import Pokedex from "./views/Pokedex";
 import MyPokemon from "./views/MyPokemon";
 import PokemonDetail from "./views/PokemonDetail";
 import Error from "./views/Error";
-import "./App.css";
 
 export default function App() {
   return (

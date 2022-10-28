@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
-import MyPokemonContainer from "../components/mypokemon/MyPokemonContainer";
-import MyPokeModal from "../components/mypokemon/MyPokeModal";
 
 export default function MyPokemon() {
   // modalState is the pokemon object containing details of the pokemon, eg. abilities, stats
@@ -17,9 +15,6 @@ export default function MyPokemon() {
 
   return (
     <div>
-      {/* <Header />
-      <MyPokeModal modalState={modalState} selectedPokemon={selectedPokemon} />
-      <MyPokemonContainer onModalClick={handleModalClick} /> */}
       <Header />
       {"My Pokemon"}
     </div>
