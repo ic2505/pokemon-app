@@ -8,7 +8,6 @@ export default function DetailPage({ pokemon }) {
   if (!pokemon)
     return (
       <div>
-        {/* <Header /> */}
         <h2>{"Loading..."}</h2>
       </div>
     );
@@ -122,18 +121,14 @@ export default function DetailPage({ pokemon }) {
               </div>
             </div>
           </div>
-          <div className="px-12 pb-12">
-            <div className="pt-2">
-              <Moves moves={pokemon.moves} />
-              <div className="flex justify-start pt-8">
-                <button className="btn btn-primary ">Add to Favorites</button>
-              </div>
+          <div className="px-12 pb-12 pt-2">
+            <Moves moves={pokemon.moves} />
+            <div className="flex justify-start pt-8">
+              <button className="btn btn-primary ">Add to Favorites</button>
             </div>
           </div>
         </div>
       </div>
-
-      {/* <div className="bg-strech"></div> */}
     </div>
   );
 }
