@@ -79,7 +79,7 @@ export default function DetailPage({ pokemon }) {
       <div className={`flex justify-center ${textColor}`}>
         <div className="shadow-xl w-11/12 backdrop-blur-md pb-20 mb-20">
           <div>
-            <div className={`card lg:card-side  lg:flex-row-reverse p-4 `}>
+            <div className={`card lg:card-side  lg:flex-row-reverse px-4 pt-4`}>
               <figure>
                 <img
                   src={pokemon.sprites.other.home.front_default}
@@ -87,7 +87,7 @@ export default function DetailPage({ pokemon }) {
                   alt={pokemon.name}
                 />
               </figure>
-              <div className="card-body">
+              <div className="card-body px-8 pt-8 pb-0">
                 <div>
                   <div className="type-icons">
                     <h1 className="text-6xl font-bold mr-6 mt-2 ">
@@ -106,17 +106,28 @@ export default function DetailPage({ pokemon }) {
                       })}
                     </div>
                   </div>
-                  <Stats stats={pokemon.stats} progressColor={progressColor} />
-                  <Abilities abilities={pokemon.abilities} />
-                  <p className="py-6"></p>
+                  <div className="pb-4">
+                    <Stats
+                      stats={pokemon.stats}
+                      progressColor={progressColor}
+                    />
+                  </div>
+                  <div className="divider"></div>
+                  <div className="pb-3">
+                    <Abilities abilities={pokemon.abilities} />
+                  </div>
+                  <div className="divider"></div>
+                  {/* <p className="py-6"></p> */}
                 </div>
               </div>
             </div>
           </div>
           <div className="px-12 pb-12">
-            <Moves moves={pokemon.moves} />
-            <div className="flex justify-start pt-8">
-              <button className="btn btn-primary ">Add to Favorites</button>
+            <div className="pt-2">
+              <Moves moves={pokemon.moves} />
+              <div className="flex justify-start pt-8">
+                <button className="btn btn-primary ">Add to Favorites</button>
+              </div>
             </div>
           </div>
         </div>

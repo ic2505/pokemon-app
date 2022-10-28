@@ -9,7 +9,7 @@ export default function Abilities({ abilities }) {
 
   return (
     <div>
-      <h1 className="text-xl pt-6 pb-2">
+      <h1 className="text-xl pt-2 pb-2">
         <b>Abilities:</b>
       </h1>
       {abilityUrls.map((url, idx) => {

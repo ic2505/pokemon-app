@@ -22,7 +22,7 @@ export default function Stat({ stat, progressColor }) {
         <progress
           className={`progress ${progressColor} w-56 mt-2.5`}
           value={stat.base_stat}
-          max="200"
+          max="160"
         ></progress>
         <div className="pl-3 mt-1">
           <p className="text-xs font-bold ">{stat.base_stat}</p>
