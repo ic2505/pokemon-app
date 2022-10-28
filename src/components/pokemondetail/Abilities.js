@@ -2,17 +2,14 @@ import React from "react";
 import Ability from "./Ability";
 
 export default function Abilities({ abilities }) {
-  const abilityNames = [];
   const abilityUrls = [];
   abilities.map((ability) => {
-    abilityNames.push(ability.ability.name);
     abilityUrls.push(ability.ability.url);
   });
 
-  //   console.log(abilities);
   return (
     <div>
-      <h1>
+      <h1 className="text-xl pt-2 pb-2">
         <b>Abilities:</b>
       </h1>
       {abilityUrls.map((url, idx) => {

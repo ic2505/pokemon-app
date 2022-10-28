@@ -30,7 +30,7 @@ export default function PokeModal({ modalState, selectedPokemon }) {
       setPokemonType(typeArr);
       console.log(modalState);
     } else {
-      console.log("Object is Empty");
+      // console.log("Object is Empty");
     }
   }, [modalState]);
 
