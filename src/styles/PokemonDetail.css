@@ -1,72 +1,41 @@
 .default-background {
-  background: url("../assets/backgrounds/default-bg.jpg") no-repeat center
-    center scroll;
+  background: url("../assets/backgrounds/default-bg.jpg");
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
 }
 
 .water-background {
-  background: url("../assets/backgrounds/Water.gif") no-repeat center center
-    fixed;
+  background: url("../assets/backgrounds/Water.gif");
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
 }
 
 .fire-background {
-  background: url("../assets/backgrounds/Fire.gif") no-repeat center center
-    fixed;
+  background: url("../assets/backgrounds/Fire.gif");
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
 }
 
 .flying-background {
-  background: url("../assets/backgrounds/Flying.gif") no-repeat center center
-    fixed;
+  background: url("../assets/backgrounds/Flying.gif");
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
 }
 .poison-background {
-  background: url("../assets/backgrounds/Poison.gif") no-repeat center center
-    fixed;
+  background: url("../assets/backgrounds/Poison.gif");
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
 }
 .electric-background {
-  background: url("../assets/backgrounds/Electric.gif") no-repeat center center
-    fixed;
+  background: url("../assets/backgrounds/Electric.gif");
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
 }
 .cosmic-background {
-  background: url("../assets/backgrounds/Cosmic.gif") no-repeat center center
-    fixed;
+  background: url("../assets/backgrounds/Cosmic.gif");
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
 }
 .grass-background {
-  background: url("../assets/backgrounds/Grass.gif") no-repeat center center
-    fixed;
+  background: url("../assets/backgrounds/Grass.gif");
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
 }
 .ice-background {
-  background: url("../assets/backgrounds/Ice.gif") no-repeat center center fixed;
+  background: url("../assets/backgrounds/Ice.gif");
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
-}
-
-.bg-strech {
-  height: 30vh;
 }
 
 .type-icons {

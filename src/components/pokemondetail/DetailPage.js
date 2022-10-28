@@ -71,15 +71,15 @@ export default function DetailPage({ pokemon }) {
   console.log(pokemon);
 
   return (
-    <div className={`${bgClass} `}>
+    <div className={`${bgClass} bg-scroll `}>
       <Link to={`/pokedex`} className="btn m-10">
         {"<- Back"}
       </Link>
 
       <div className={`flex justify-center ${textColor}`}>
-        <div className="shadow-xl w-11/12 backdrop-blur-md pb-20">
+        <div className="shadow-xl w-11/12 backdrop-blur-md pb-20 mb-20">
           <div>
-            <div className={`card lg:card-side  lg:flex-row-reverse p-4`}>
+            <div className={`card lg:card-side  lg:flex-row-reverse p-4 `}>
               <figure>
                 <img
                   src={pokemon.sprites.other.home.front_default}
@@ -122,7 +122,7 @@ export default function DetailPage({ pokemon }) {
         </div>
       </div>
 
-      <div className="bg-strech"></div>
+      {/* <div className="bg-strech"></div> */}
     </div>
   );
 }
